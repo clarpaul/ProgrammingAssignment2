@@ -20,7 +20,7 @@ makeCacheMatrix <- function(X = matrix())
 
 ## Write a short comment describing this function
 
-cacheSolve <- function(Z, ...) 
+cacheSolve <- function(Z) 
 {
         I <- Z$getinv()
         if(!is.null(I))
