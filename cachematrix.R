@@ -29,6 +29,8 @@ cacheSolve <- function(Z, ...)
                 return(I)
         }
         MAT <- Z$get
-        I <- solve()
+        I <- solve(MAT, ...)
+        Z$setinv(I)
+        I
         ## Return a matrix that is the inverse of 'Z'
 }
