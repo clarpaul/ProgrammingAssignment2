@@ -20,7 +20,15 @@ makeCacheMatrix <- function(X = matrix())
 
 ## Write a short comment describing this function
 
-cacheSolve <- function(X, ...) 
+cacheSolve <- function(Z, ...) 
 {
-        ## Return a matrix that is the inverse of 'X'
+        I <- Z$getinv()
+        if(!is.null(I))
+        {
+                message("getting cached data")
+                return(I)
+        }
+        MAT <- Z$get
+        I <- solve()
+        ## Return a matrix that is the inverse of 'Z'
 }
